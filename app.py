@@ -20,6 +20,8 @@ PRODUCT_URLS = [
     "https://www.dzrt.com/en/edgy-mint.html",
     "https://www.dzrt.com/en/highland-berries.html",
     "https://www.dzrt.com/en/icy-rush.html",
+    "https://www.dzrt.com/en/samra.html",
+    "https://www.dzrt.com/en/haila.html",
 ]
 
 CHECK_INTERVAL = 300
@@ -31,7 +33,7 @@ is_checking = False  # Flag to control checking process
 def start(update: Update, context: CallbackContext):
     global CHAT_ID
     CHAT_ID = update.message.chat_id
-    update.message.reply_text("Started checking the product availability.")
+    update.message.reply_text("Started checking the product availability.👌")
     # Start the checking process in a new thread
     if not is_checking:
         threading.Thread(target=check_product_availability).start()
